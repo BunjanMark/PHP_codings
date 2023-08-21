@@ -33,8 +33,7 @@ if ($_SERVER["REQUEST_METHOD"]) {
     // we want inputs to be complete
 
     if (empty($firstname)) {
-        exit();
-        header("Location: ../intro/Form_handling.php");
+        exit(header("Location: ../intro/2_Form_handling.php"));
     }
 
     echo "These are the data we get when form is submitted";
@@ -57,11 +56,12 @@ if ($_SERVER["REQUEST_METHOD"]) {
 
     // Once this file runs, it goes back the the header section
     //      because we don't want users to access this formhandler/developer's file
-    header("Location: ../intro/Form_handling.php");
+
+    exit(header("Location: ../intro/2_Form_handling.php"));
 } else {
 
     // If anything, url will be directed to user
-    header("Location: ../intro/Form_handling.php");
+    exit(header("Location: ../intro/2_Form_handling.php"));
 }
 
 ?>
