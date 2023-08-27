@@ -53,6 +53,7 @@
 
     echo "<br>";
     echo "<br>";
+    array_push($array1, "Helllo");
     $array1["Shox"] = "Graphic Design"; //Adds element to the very end
     echo "<br>";
     print_r($array1); //print with less detailed
