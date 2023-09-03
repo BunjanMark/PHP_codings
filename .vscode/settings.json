@@ -15,5 +15,6 @@
       "password": "",
       "connectionTimeout": 15
     }
-  ]
+  ],
+  "dataworkspace.excludedProjects": ["my_practice/my_practice.sqlproj"]
 }

@@ -90,51 +90,86 @@
 
     </header>
     <main>
-        <div class="container-sm">
-            <?php
-            $string = "Hello world!  HEHEHE";
-            $number = 5.5;
+        <div style="display: flex; flex-direction:row">
 
-            echo strlen($string); //Counts the number of char inside the string
-            echo "<br>";
-            echo strpos($string, "H"); //Prints the position/[index] of a char / string
-            echo "<br>";
-            echo str_replace("world!", "Mark", $string); //Replace the 1st para with 2nd of a variable
-            echo "<br>";
-            echo strtoupper($string);
-            echo "<br>";
-            echo substr($string, 1, strlen($string)/* total lenth (last index)*/);
-            echo "<br>";
+            <div class="container-sm">
+                <?php
+                $string = "Hello world!  HEHEHE";
+                $number = 5.5;
 
-
-
-            print_r(explode(" ", $string, 2)); //returns an array of each word separated by ' ' based on number of units
-            echo "<br>";
+                echo strlen($string); //Counts the number of char inside the string
+                echo "<br>";
+                echo strpos($string, "H"); //Prints the position/[index] of a char / string
+                echo "<br>";
+                echo str_replace("world!", "Mark", $string); //Replace the 1st para with 2nd of a variable
+                echo "<br>";
+                echo strtoupper($string);
+                echo "<br>";
+                echo substr($string, 1, strlen($string)/* total lenth (last index)*/);
+                echo "<br>";
 
 
-            // number built in function
 
-            echo abs($number); //returns the abs value (positive)
-            echo "<br>";
-            echo round($number); //rounds up the number
-            echo "<br>";
-            echo pow($number - .5, 2); //Exponentiation /to the nth power
-            echo "<br>";
-            echo sqrt($number); //sqrt of the number
-            echo "<br>";
-            echo random_int(1, 1000); //(SAFE)"Returns a cryptographically secure random integer in the range min to max, inclusive."
-            echo "<br>";
-            echo rand(null, 1000); //(UNSAFE)This function does not generate cryptographically secure values" 
-            // Cache = store data to retrieve data from website to restore faster
-            echo "<br>";
+                print_r(explode(" ", $string, 2)); //returns an array of each word separated by ' ' based on number of units
+                echo "<br>";
 
 
-            // Working with arrays
+                // number built in function
 
-            echo "<h3> Working with array </h3>";
-            $array = ["Apple", "Banana", "Cherry"];
-            echo count([1 => array(1, 2, 3, 4), 2, 3, 4], COUNT_RECURSIVE); //this is useful in counting multi-array
-            ?>
+                echo abs($number); //returns the abs value (positive)
+                echo "<br>";
+                echo round($number); //rounds up the number
+                echo "<br>";
+                echo pow($number - .5, 2); //Exponentiation /to the nth power
+                echo "<br>";
+                echo sqrt($number); //sqrt of the number
+                echo "<br>";
+                echo random_int(1, 1000); //(SAFE)"Returns a cryptographically secure random integer in the range min to max, inclusive."
+                echo "<br>";
+                echo rand(null, 1000); //(UNSAFE)This function does not generate cryptographically secure values" 
+                // Cache = store data to retrieve data from website to restore faster
+                echo "<br>";
+
+
+                // Working with arrays
+
+                echo "<h3> Working with array </h3>";
+                $array = ["Apple", "Banana", "Cherry"];
+                echo count([1 => array(1, 2, 3, 4), 2, 3, 4], COUNT_RECURSIVE /*This is useful in multi-array */);
+                echo "<br>";
+
+                $array_from_diff_codeblock = [
+                    1 => array("a", "b", "c"),
+                    2 => array("d", "e", "f")
+                ];
+                ?>
+            </div>
+            <div class="container-sm">
+                <?php
+
+                echo "secondpart";
+                echo "<br>";
+                echo is_array($numbers = [
+                    1 => array("a", "b", "c"),
+                    2 => array("d", "e", "f")
+                ]); //returns 1=true or 0=false
+                echo "<br>";
+                echo array_push($array_from_diff_codeblock, array(3 => array(2, 4, 5)));
+                // add another element into array with associate array
+                echo "<br>";
+                print_r($array_from_diff_codeblock);
+                echo "<br>";
+                print_r(array_reverse($array_from_diff_codeblock, true));
+                echo "<br>";
+
+                echo date("Y-M-d H:i:s");
+                // https://www.w3schools.com/php/func_date_date.asp
+                echo "<br>";
+                echo time();
+                //https://www.w3schools.com/php/func_date_time.asp
+
+                ?>
+            </div>
         </div>
     </main>
     <footer>
